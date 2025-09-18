@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Chart.js</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+
+        <p style="text-align:center; margin-top:2rem">Más información en <a href="https://www.chartjs.org/docs/latest/getting-started/" target="_blank">Chart.js</a>, ahora mira este otro <a href="page.html">gráfico</a> </p>
+
+        <canvas id="aqui"></canvas>
+        <canvas id="allá"></canvas>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            new Chart("aqui", {
+                type: "bar",
+                data: {
+      labels: ['Santiago', 'Valparaíso', 'BioBío', 'Araucanía', "O´Higgins", 'Maule'],
+      datasets: [{
+        label: 'Habitantes',
+        data: [7440741, 1896053, 1613059, 987228, 1123008, 832864],
+
+        backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)'],
+       borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)'],
+
+        borderWidth: 1
+      }]
+    },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+                },
+            });
+        </script>
+
+         <script>
+            new Chart("allá", {
+                type: "line",
+                data: {
+      labels: ['Santiago', 'Valparaíso', 'BioBío', 'Araucanía', "O´Higgins", 'Maule'],
+      datasets: [
+        {
+        label: 'Habitantes',
+        data: [7440741, 1896053, 1613059, 987228, 1123008, 832864],
+        borderWidth: 1,
+        borderColor: "tomato",
+      },
+        {
+        label: 'Hola',
+        data: [5440741, 4896053, 3613059, 2187228, 1123008, 732864],
+        borderWidth: 2,
+        borderColor: "orange",
+    }]
+
+
+    },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>

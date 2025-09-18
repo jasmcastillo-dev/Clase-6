@@ -1,0 +1,15 @@
+*{
+	margin:0px;
+	padding:0;
+}
+
+
+p{
+	text-align: center;
+	margin-top:2rem; /* (m,em) medido tipográfica predefinida
+	R de root (apela a la raíz)/ 16px*/
+} 
+
+canvas{
+	max-height: 80vh;
+}
